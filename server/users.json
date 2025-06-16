@@ -1,0 +1,27 @@
+[
+  {
+    "email": "danik123322",
+    "password": "322",
+    "paid": false
+  },
+  {
+    "email": "alanalanalan",
+    "password": "1",
+    "paid": false
+  },
+  {
+    "email": "1",
+    "password": "1",
+    "paid": true
+  },
+  {
+    "email": "14",
+    "password": "14",
+    "paid": false
+  },
+  {
+    "email": "3",
+    "password": "3",
+    "paid": false
+  }
+]
