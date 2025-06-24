@@ -11,6 +11,8 @@
 
 <body>
 
+
+
     <header>
 
         <section class="buttonANDlogo">
@@ -41,6 +43,8 @@
 
     </header>
 
+
+
     <aside id="sidebar" class="open">
         <ul>
             <li class="activePage">
@@ -70,17 +74,27 @@
         </ul>
     </aside>
 
+
+
     <main class="mainWrapRating">
         <section class="bodyRating">
             <!-- Movie title -->
             <p id="movieTitle">Loading...</p>
 
-            <!-- Movie poster -->
-            <img id="moviePoster" src="" alt="Movie Poster" style="display:none;" />
 
-            <!-- IMDb rating and description -->
-            <p id="rating">Fetching IMDb rating...</p>
-            <p id="description">Loading description...</p>
+
+            <section id="poster-section">
+                <!-- Movie poster -->
+                <img id="moviePoster" src="" alt="Movie Poster" style="display:none; border: 3px solid gray;" />
+
+                <section id="poster-and-p">
+                    <!-- IMDb rating and description -->
+                    <p id="rating">Fetching IMDb rating...</p>
+                    <p id="description">Loading description...</p>
+                </section>
+            </section>
+
+
 
             <!-- Trailer -->
             <section id="moviePos">
@@ -88,7 +102,6 @@
                     title="Movie Trailer">
                 </iframe>
             </section>
-
 
             <!-- Comments Section -->
             <section id="commentsSection">
@@ -99,6 +112,8 @@
             </section>
         </section>
     </main>
+
+
 
     <script src="js/rating.js"></script>
     <script src="js/home.js"></script>

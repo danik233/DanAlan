@@ -115,15 +115,6 @@ header {
 
 }
 
-/* .loginSystem #loginBtn {
-    width: 165px;
-    height: 50px;
-    border: none;
-    background-color: red;
-    border-radius: 5px;
-    cursor: pointer;
-} */
-
 #moonDark {
     background-color: #5D6163;
     border-radius: 50%;
@@ -230,31 +221,24 @@ header {
 }
 
 /* -------------------------------------------------- main */
-/*main wrap + scroll vertical*/
 .mainWrap {
-    /* display: flex; */
-    /*Scrolling will not working if ill use display flex*/
-    flex-direction: column;
+    background-color: #F5F5F5;
     position: fixed;
-    /* or use relative if needed */
     top: 70px;
     left: 220px;
     right: 0;
     bottom: 0;
     overflow-y: scroll;
-    /* scroll only vertically */
-    /* overflow-x: auto; */
     scroll-behavior: smooth;
-    cursor: grab;
-    background-color: #F5F5F5;
     padding: 20px;
     scroll-behavior: smooth;
     cursor: auto;
+    transition: margin-left 0.3s ease;
+    transition: left 0.3s ease;
 }
 
 .mainWrap.fullscreen {
     left: 0;
-    /* instead of 220px */
 }
 
 .movies {
@@ -269,6 +253,7 @@ header {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.6s ease-out;
+
 }
 
 .movies.visible {
@@ -446,11 +431,30 @@ header {
     border-radius: 8px;
 }
 
-#rating,
+#poster-section {
+    display: flex;
+    margin-bottom: 100px;
+    height: 400px;
+}
+
+#poster-and-p {
+    background-color: rgb(160,160,160);
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 30px;
+    border-radius: 30px;
+    overflow-y: auto;
+}
+
+#rating {
+    font-weight: bold;
+    font-size: 30px;
+}
+
 #description {
     font-size: 20px;
-    margin-top: 20px;
-
 }
 
 #commentsSection {
@@ -472,7 +476,7 @@ header {
     border-radius: 6px;
 }
 
-textarea {
+#commentsSection textarea {
     width: 100%;
     height: 60px;
     margin-top: 10px;
@@ -684,7 +688,7 @@ textarea {
     #topRow {
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis
+        text-overflow: ellipsis;
     }
 
     #rating,
