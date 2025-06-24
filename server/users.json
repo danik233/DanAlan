@@ -23,5 +23,10 @@
     "email": "3",
     "password": "3",
     "paid": false
+  },
+  {
+    "email": "331",
+    "password": "331",
+    "paid": true
   }
 ]
