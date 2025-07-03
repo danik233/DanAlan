@@ -4,10 +4,12 @@ const mongoose = require("mongoose");
 const path = require("path");
 const cors = require("cors");
 const fs = require("fs");
+const bcrypt = require("bcrypt");
 const User = require("./modules/user");
 
 const app = express();
-const PORT = process.env.PORT || 3000; // <-- use env PORT for cloud
+const PORT = process.env.PORT || 3000;
+const SALT_ROUNDS = 10; // bcrypt cost factor
 
 // ⛔ Block direct access to JSON files
 app.use((req, res, next) => {
@@ -38,7 +40,7 @@ async function syncUsersJson() {
     }
 }
 
-// ✅ Routes
+// Routes to serve frontend pages
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
@@ -51,7 +53,7 @@ app.get("/homepage.html", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public", "homepage.html"));
 });
 
-// ✅ Login
+// ✅ Login endpoint
 app.post("/login", async (req, res) => {
     try {
         let { email, password } = req.body;
@@ -60,12 +62,16 @@ app.post("/login", async (req, res) => {
         if (!email || !password)
             return res.status(400).json({ message: "Email and password required" });
 
+        // Optional admin hardcoded login — consider removing or hashing in production
         if (email === "admin@admin" && password === "admin")
             return res.json({ role: "admin", message: "Admin login successful", redirect: "/admin.html" });
 
         const user = await User.findOne({ email });
         if (!user) return res.status(404).json({ message: "User not found. Please signup." });
-        if (user.password !== password) return res.status(401).json({ message: "Incorrect password." });
+
+        // Verify password with bcrypt
+        const passwordMatch = await bcrypt.compare(password, user.password);
+        if (!passwordMatch) return res.status(401).json({ message: "Incorrect password." });
 
         const message = user.paid ? "Login successful." : "Login successful. Free trial 30 days.";
         res.json({ role: "user", message, redirect: "/homepage.html" });
@@ -75,7 +81,7 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// ✅ Signup
+// ✅ Signup endpoint with password hashing
 app.post("/signup", async (req, res) => {
     try {
         let { email, password, repeatPassword, paid } = req.body;
@@ -90,7 +96,10 @@ app.post("/signup", async (req, res) => {
         const exists = await User.findOne({ email });
         if (exists) return res.status(409).json({ message: "Email already exists." });
 
-        const newUser = new User({ email, password, paid });
+        // Hash the password before saving
+        const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
+
+        const newUser = new User({ email, password: hashedPassword, paid });
         await newUser.save();
         await syncUsersJson();
 
@@ -103,7 +112,7 @@ app.post("/signup", async (req, res) => {
     }
 });
 
-// ✅ Get all users (admin feature)
+// ✅ Get all users (admin)
 app.get("/api/users", async (req, res) => {
     try {
         const users = await User.find({}).lean();
@@ -115,7 +124,7 @@ app.get("/api/users", async (req, res) => {
     }
 });
 
-// ✅ Update user
+// ✅ Update user (hash new password if changed)
 app.put("/api/users/:email", async (req, res) => {
     try {
         const userEmail = decodeURIComponent(req.params.email).toLowerCase();
@@ -130,7 +139,10 @@ app.put("/api/users/:email", async (req, res) => {
             user.email = newEmail.toLowerCase();
         }
 
-        if (newPassword) user.password = newPassword;
+        if (newPassword) {
+            user.password = await bcrypt.hash(newPassword, SALT_ROUNDS);
+        }
+
         if (typeof newPaid === "boolean") user.paid = newPaid;
 
         await user.save();
@@ -159,7 +171,7 @@ app.delete("/api/users/:email", async (req, res) => {
     }
 });
 
-// ✅ Start Main Server
+// Start server
 app.listen(PORT, () => {
     console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
