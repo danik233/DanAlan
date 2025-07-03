@@ -1,22 +1,15 @@
 [
   {
     "_id": "6866417b80767491dbaacec4",
-    "email": "3",
-    "password": "3",
-    "paid": true,
-    "__v": 0
-  },
-  {
-    "_id": "6866441229f102b3c4abc67d",
-    "email": "322",
-    "password": "322",
+    "email": "add@ss",
+    "password": "123",
     "paid": true,
     "__v": 0
   },
   {
     "_id": "68664651d05eb0233a1d53bf",
-    "email": "22",
-    "password": "22",
+    "email": "aa@@@",
+    "password": "12",
     "paid": true,
     "__v": 0
   },

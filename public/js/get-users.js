@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const res = await fetch("http://localhost:3000/api/users"); // ✅ Fixed port
+        const res = await fetch("/api/users"); // <-- relative URL now
         if (!res.ok) throw new Error("Failed to fetch users");
         const users = await res.json();
         const table = document.querySelector("table");
 
-        // 🧼 Clear previous rows (except header)
+        // Clear previous rows (except header)
         document.querySelectorAll("tr:not(:first-child)").forEach(r => r.remove());
 
         users.forEach(user => {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             table.appendChild(row);
         });
     } catch (err) {
-        console.error("❌ Failed to load users:", err);
+        console.error("Failed to load users:", err);
     }
 });
 
@@ -29,14 +29,14 @@ async function deleteUser(email) {
     if (!confirm(`Delete ${email}?`)) return;
 
     try {
-        const res = await fetch(`http://localhost:3000/api/users/${encodeURIComponent(email)}`, {
+        const res = await fetch(`/api/users/${encodeURIComponent(email)}`, {
             method: "DELETE"
         });
         const data = await res.json();
         alert(data.message);
         location.reload();
     } catch {
-        alert("❌ Failed to delete user");
+        alert("Failed to delete user");
     }
 }
 
@@ -48,7 +48,7 @@ async function changeUser(email) {
     const newPaid = confirm("Paid? OK = true, Cancel = false");
 
     try {
-        const res = await fetch(`http://localhost:3000/api/users/${encodeURIComponent(email)}`, {
+        const res = await fetch(`/api/users/${encodeURIComponent(email)}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ newEmail, newPassword, newPaid })
@@ -58,6 +58,6 @@ async function changeUser(email) {
         alert(data.message);
         location.reload();
     } catch {
-        alert("❌ Failed to update user");
+        alert("Failed to update user");
     }
 }

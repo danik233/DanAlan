@@ -1,4 +1,3 @@
-// server/server.js
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
@@ -8,7 +7,7 @@ const fs = require("fs");
 const User = require("./modules/user");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // <-- use env PORT for cloud
 
 // ⛔ Block direct access to JSON files
 app.use((req, res, next) => {
@@ -54,44 +53,54 @@ app.get("/homepage.html", (req, res) => {
 
 // ✅ Login
 app.post("/login", async (req, res) => {
-    let { email, password } = req.body;
-    if (email) email = email.toLowerCase();
+    try {
+        let { email, password } = req.body;
+        if (email) email = email.toLowerCase();
 
-    if (!email || !password)
-        return res.status(400).json({ message: "Email and password required" });
+        if (!email || !password)
+            return res.status(400).json({ message: "Email and password required" });
 
-    if (email === "admin@admin" && password === "admin")
-        return res.json({ role: "admin", message: "Admin login successful", redirect: "/admin.html" });
+        if (email === "admin@admin" && password === "admin")
+            return res.json({ role: "admin", message: "Admin login successful", redirect: "/admin.html" });
 
-    const user = await User.findOne({ email });
-    if (!user) return res.status(404).json({ message: "User not found. Please signup." });
-    if (user.password !== password) return res.status(401).json({ message: "Incorrect password." });
+        const user = await User.findOne({ email });
+        if (!user) return res.status(404).json({ message: "User not found. Please signup." });
+        if (user.password !== password) return res.status(401).json({ message: "Incorrect password." });
 
-    const message = user.paid ? "Login successful." : "Login successful. Free trial 30 days.";
-    res.json({ role: "user", message, redirect: "/homepage.html" });
+        const message = user.paid ? "Login successful." : "Login successful. Free trial 30 days.";
+        res.json({ role: "user", message, redirect: "/homepage.html" });
+    } catch (err) {
+        console.error("Login error:", err);
+        res.status(500).json({ message: "Server error during login" });
+    }
 });
 
 // ✅ Signup
 app.post("/signup", async (req, res) => {
-    let { email, password, repeatPassword, paid } = req.body;
-    if (email) email = email.toLowerCase();
+    try {
+        let { email, password, repeatPassword, paid } = req.body;
+        if (email) email = email.toLowerCase();
 
-    if (!email || !password || !repeatPassword || typeof paid !== "boolean")
-        return res.status(400).json({ message: "All fields are required" });
+        if (!email || !password || !repeatPassword || typeof paid !== "boolean")
+            return res.status(400).json({ message: "All fields are required" });
 
-    if (password !== repeatPassword)
-        return res.status(400).json({ message: "Passwords do not match" });
+        if (password !== repeatPassword)
+            return res.status(400).json({ message: "Passwords do not match" });
 
-    const exists = await User.findOne({ email });
-    if (exists) return res.status(409).json({ message: "Email already exists." });
+        const exists = await User.findOne({ email });
+        if (exists) return res.status(409).json({ message: "Email already exists." });
 
-    const newUser = new User({ email, password, paid });
-    await newUser.save();
-    await syncUsersJson();
+        const newUser = new User({ email, password, paid });
+        await newUser.save();
+        await syncUsersJson();
 
-    res.status(201).json({
-        message: paid ? "Signup successful." : "Signup successful. Free trial 30 days."
-    });
+        res.status(201).json({
+            message: paid ? "Signup successful." : "Signup successful. Free trial 30 days."
+        });
+    } catch (err) {
+        console.error("Signup error:", err);
+        res.status(500).json({ message: "Server error during signup" });
+    }
 });
 
 // ✅ Get all users (admin feature)
@@ -101,6 +110,7 @@ app.get("/api/users", async (req, res) => {
         await syncUsersJson();
         res.json(users);
     } catch (err) {
+        console.error("Get users error:", err);
         res.status(500).json({ error: "Failed to fetch users" });
     }
 });

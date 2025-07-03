@@ -14,7 +14,7 @@ async function handleLogin() {
     }
 
     try {
-        const response = await fetch("http://localhost:3000/login", {  // ✅ Changed port to 3000
+        const response = await fetch("/login", {  // <-- changed here: relative URL
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
