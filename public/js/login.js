@@ -1,43 +1,59 @@
 const loginBtn = document.getElementById("loginBtn");
 
+// Function to handle login
 async function handleLogin() {
-    const email = document.getElementById("emailInput").value.trim().toLowerCase();
-    const password = document.getElementById("passInput").value;
+    const emailInput = document.getElementById("emailInput");
+    const passInput = document.getElementById("passInput");
 
-    const response = await fetch("/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ email, password })
-    });
+    const email = emailInput.value.trim().toLowerCase();
+    const password = passInput.value;
 
-    const data = await response.json();
-
-    if (data.role === "admin") {
-        alert(data.message);
-        window.location.href = "admin.html";
+    if (!email || !password) {
+        alert("Please enter both email and password.");
         return;
     }
 
-    if (response.ok) {
-        alert(data.message);
-        window.location.href = "homepage.html";
-    } else {
-        alert(data.message || "Login failed.");
+    try {
+        const response = await fetch("http://localhost:3000/login", {  // ✅ Changed port to 3000
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            alert(data.message || "Login failed.");
+            return;
+        }
+
+        alert(data.message || "Login successful.");
+        if (data.redirect) {
+            window.location.href = data.redirect;
+        }
+
+    } catch (error) {
+        console.error("Login error:", error);
+        alert("Server error. Please try again later.");
     }
 }
 
+// Handle login button click
 loginBtn.addEventListener("click", handleLogin);
 
+// Handle Enter key on both input fields
 ["emailInput", "passInput"].forEach(id => {
-    document.getElementById(id).addEventListener("keydown", (e) => {
+    const input = document.getElementById(id);
+    input.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
             handleLogin();
         }
     });
 });
 
+// Navigate to signup page
 document.getElementById("signupBtn").addEventListener("click", () => {
     window.location.href = "signup.html";
 });

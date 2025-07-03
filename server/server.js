@@ -1,166 +1,155 @@
+// server/server.js
+require("dotenv").config();
 const express = require("express");
-const fs = require("fs");
+const mongoose = require("mongoose");
 const path = require("path");
+const cors = require("cors");
+const fs = require("fs");
+const User = require("./modules/user");
 
 const app = express();
 const PORT = 3000;
-const USERS_FILE = path.join(__dirname, "users.json");  // users.json is in same folder as server.js
 
+// ⛔ Block direct access to JSON files
+app.use((req, res, next) => {
+    if (req.url.endsWith(".json")) return res.status(403).send("Access Denied");
+    next();
+});
+
+app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "..", "public"))); // Serve frontend files from ../public
+app.use(express.static(path.join(__dirname, "..", "public")));
 
-// Explicitly serve index.html at root URL
+// ✅ MongoDB Connection
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => console.log("✅ Connected to MongoDB"))
+    .catch(err => console.error("❌ MongoDB connection error:", err));
+
+// ✅ Save users.json to data folder
+async function syncUsersJson() {
+    try {
+        const users = await User.find({}).lean();
+        fs.writeFileSync(path.join(__dirname, "data", "users.json"), JSON.stringify(users, null, 2), "utf8");
+        console.log("✅ users.json synced from MongoDB");
+    } catch (err) {
+        console.error("❌ Failed to sync users.json:", err);
+    }
+}
+
+// ✅ Routes
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
 
-// Helper functions
-function readUsers() {
-    if (!fs.existsSync(USERS_FILE)) return [];
-    try {
-        const data = fs.readFileSync(USERS_FILE, "utf-8");
-        return JSON.parse(data || "[]");
-    } catch (err) {
-        console.error("Failed to parse users.json:", err);
-        return [];
-    }
-}
-
-function writeUsers(users) {
-    try {
-        fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
-    } catch (err) {
-        console.error("Failed to write users.json:", err);
-    }
-}
-
-// LOGIN endpoint
-app.post("/login", (req, res) => {
-    let { email, password } = req.body;
-    if (email) email = email.toLowerCase();
-
-    if (!email || !password) {
-        return res.status(400).json({ message: "Email and password are required." });
-    }
-
-    // Admin user check
-    if (email === "admin@admin" && password === "admin") {
-        // Redirect admin to admin.html
-        return res.json({ role: "admin", message: "Admin login successful.", redirect: "/admin.html" });
-    }
-
-    const users = readUsers();
-    const user = users.find(u => u.email === email);
-
-    if (!user) {
-        return res.status(404).json({ message: "User not found. Please signup." });
-    }
-
-    if (user.password !== password) {
-        return res.status(401).json({ message: "Incorrect password." });
-    }
-
-    const redirectUrl = "/homepage.html";
-    const message = user.paid ? "Login successful." : "Login successful. Free trial 30 days.";
-
-    res.json({ message, redirect: redirectUrl });
-});
-
-// SIGNUP endpoint
-app.post("/signup", (req, res) => {
-    let { email, password, repeatPassword, paid } = req.body;
-    if (email) email = email.toLowerCase();
-
-    if (!email || !password || !repeatPassword || typeof paid !== "boolean") {
-        return res.status(400).json({ message: "All fields including paid status are required." });
-    }
-
-    if (password !== repeatPassword) {
-        return res.status(400).json({ message: "Passwords do not match." });
-    }
-
-    const users = readUsers();
-    if (users.some(u => u.email === email)) {
-        return res.status(409).json({ message: "Email already exists." });
-    }
-
-    users.push({ email, password, paid });
-    writeUsers(users);
-
-    res.status(201).json({
-        message: paid
-            ? "Signup successful."
-            : "Signup successful. Free trial 30 days."
-    });
-});
-
-// Admin: Get all users
-app.get("/api/users", (req, res) => {
-    const users = readUsers();
-    res.json(users);
-});
-
-// Admin: Delete a user by email
-app.delete("/api/users/:email", (req, res) => {
-    const emailToDelete = req.params.email.toLowerCase();
-    let users = readUsers();
-    const initialLength = users.length;
-
-    users = users.filter(u => u.email !== emailToDelete);
-    if (users.length === initialLength) {
-        return res.status(404).json({ message: "User not found." });
-    }
-
-    writeUsers(users);
-    res.json({ message: `User ${emailToDelete} deleted.` });
-});
-
-// Admin: Update user by email
-app.put("/api/users/:email", (req, res) => {
-    const emailToUpdate = req.params.email.toLowerCase();
-    const { email: newEmail, password: newPassword, paid: newPaid } = req.body;
-
-    let users = readUsers();
-    const index = users.findIndex(u => u.email === emailToUpdate);
-
-    if (index === -1) {
-        return res.status(404).json({ error: "User not found." });
-    }
-
-    // If newEmail is provided and different, check for duplicates
-    if (newEmail && newEmail.toLowerCase() !== emailToUpdate) {
-        if (users.some((u, i) => i !== index && u.email === newEmail.toLowerCase())) {
-            return res.status(409).json({ error: "Email already in use by another user." });
-        }
-        users[index].email = newEmail.toLowerCase();
-    }
-
-    // Update password if provided
-    if (newPassword) {
-        users[index].password = newPassword;
-    }
-
-    // Update paid if provided
-    if (typeof newPaid === "boolean") {
-        users[index].paid = newPaid;
-    }
-
-    writeUsers(users);
-    res.json({ message: `User ${emailToUpdate} updated.` });
-});
-
-// Serve admin.html explicitly (to allow redirect)
 app.get("/admin.html", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public", "admin.html"));
 });
 
-// Serve homepage.html explicitly (if needed)
 app.get("/homepage.html", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public", "homepage.html"));
 });
 
-// Catch-all for other static files is handled by express.static
+// ✅ Login
+app.post("/login", async (req, res) => {
+    let { email, password } = req.body;
+    if (email) email = email.toLowerCase();
 
+    if (!email || !password)
+        return res.status(400).json({ message: "Email and password required" });
+
+    if (email === "admin@admin" && password === "admin")
+        return res.json({ role: "admin", message: "Admin login successful", redirect: "/admin.html" });
+
+    const user = await User.findOne({ email });
+    if (!user) return res.status(404).json({ message: "User not found. Please signup." });
+    if (user.password !== password) return res.status(401).json({ message: "Incorrect password." });
+
+    const message = user.paid ? "Login successful." : "Login successful. Free trial 30 days.";
+    res.json({ role: "user", message, redirect: "/homepage.html" });
+});
+
+// ✅ Signup
+app.post("/signup", async (req, res) => {
+    let { email, password, repeatPassword, paid } = req.body;
+    if (email) email = email.toLowerCase();
+
+    if (!email || !password || !repeatPassword || typeof paid !== "boolean")
+        return res.status(400).json({ message: "All fields are required" });
+
+    if (password !== repeatPassword)
+        return res.status(400).json({ message: "Passwords do not match" });
+
+    const exists = await User.findOne({ email });
+    if (exists) return res.status(409).json({ message: "Email already exists." });
+
+    const newUser = new User({ email, password, paid });
+    await newUser.save();
+    await syncUsersJson();
+
+    res.status(201).json({
+        message: paid ? "Signup successful." : "Signup successful. Free trial 30 days."
+    });
+});
+
+// ✅ Get all users (admin feature)
+app.get("/api/users", async (req, res) => {
+    try {
+        const users = await User.find({}).lean();
+        await syncUsersJson();
+        res.json(users);
+    } catch (err) {
+        res.status(500).json({ error: "Failed to fetch users" });
+    }
+});
+
+// ✅ Update user
+app.put("/api/users/:email", async (req, res) => {
+    try {
+        const userEmail = decodeURIComponent(req.params.email).toLowerCase();
+        const { newEmail, newPassword, newPaid } = req.body;
+
+        const user = await User.findOne({ email: userEmail });
+        if (!user) return res.status(404).json({ error: "User not found" });
+
+        if (newEmail && newEmail !== user.email) {
+            const exists = await User.findOne({ email: newEmail });
+            if (exists) return res.status(409).json({ error: "Email already in use" });
+            user.email = newEmail.toLowerCase();
+        }
+
+        if (newPassword) user.password = newPassword;
+        if (typeof newPaid === "boolean") user.paid = newPaid;
+
+        await user.save();
+        await syncUsersJson();
+
+        res.json({ message: `User ${userEmail} updated.` });
+    } catch (err) {
+        console.error("Failed to update user:", err);
+        res.status(500).json({ error: "Failed to update user" });
+    }
+});
+
+// ✅ Delete user
+app.delete("/api/users/:email", async (req, res) => {
+    try {
+        const userEmail = decodeURIComponent(req.params.email).toLowerCase();
+        const deleted = await User.findOneAndDelete({ email: userEmail });
+
+        if (!deleted) return res.status(404).json({ error: "User not found" });
+
+        await syncUsersJson();
+        res.json({ message: `User ${userEmail} deleted.` });
+    } catch (err) {
+        console.error("Failed to delete user:", err);
+        res.status(500).json({ error: "Failed to delete user" });
+    }
+});
+
+// ✅ Start Main Server
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
