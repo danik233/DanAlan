@@ -1,16 +1,45 @@
 [
   {
-    "_id": "6866654647c81b9b73f2210d",
-    "email": "sss",
-    "password": "$2b$10$vXyQkbC9jRjMzvLlFhjEF.VZJ/oFhq.uvdZFds4AvrHE17zf37DUG",
+    "_id": "686665f9ca980bd68672516e",
+    "email": "srk",
+    "password": "$2b$10$Qs0Aw/Jljxrud7Dyal5gMO1b.3Pwhw3VUiOX.adbxv54HNxKRlnFK",
     "paid": true,
     "__v": 0
   },
   {
-    "_id": "686665f9ca980bd68672516e",
-    "email": "alandani",
-    "password": "$2b$10$MXEAGxSCfTU68HRLssBW6.hNF83HsizPrP3z7l2KV/Hy3EpSv5rbO",
+    "_id": "686667710b0892319c093103",
+    "email": "hello@world",
+    "password": "$2b$10$syamRCpcdFPwC6wqGc5iE.eXtj0JfKnkUdZ5FoDy9IAxgq94da7Km",
     "paid": true,
+    "__v": 0
+  },
+  {
+    "_id": "686667d30b0892319c09311b",
+    "email": "1",
+    "password": "$2b$10$Wpv55TH2U.z11Jr9g86HSe3BJebDUJPPIE0KLyjkTBssnHcr7gdLO",
+    "paid": false,
+    "__v": 0
+  },
+  {
+    "_id": "6866714dd0b57ba3565bce7e",
+    "email": "new",
+    "password": "$2b$10$HVp6tLtothTXCzsC8GvP4eGg9R5.x4UNb4h9HgEuLKnQr9pFdj4I6",
+    "paid": false,
+    "__v": 0
+  },
+  {
+    "_id": "68667251d0b57ba3565bce87",
+    "email": "estermor16@gmail.com",
+    "password": "$2b$10$dZttIBBLQlmd/k4g9iQX3.GoCrXnig706GF966CuoQVb4YaRWJvNy",
+    "paid": true,
+    "__v": 0
+  },
+  {
+    "_id": "68668fa1c931bde6a825bd7c",
+    "email": "9",
+    "password": "$2b$10$SM.csmnqhjpBIOBR2mBR5OjEcm59t1ucACO.I4uWTJ1K5j.u/EY4a",
+    "paid": false,
+    "favArray": [],
     "__v": 0
   }
 ]

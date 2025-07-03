@@ -84,7 +84,7 @@ app.post("/login", async (req, res) => {
 // ✅ Signup endpoint with password hashing
 app.post("/signup", async (req, res) => {
     try {
-        let { email, password, repeatPassword, paid } = req.body;
+        let { email, password, repeatPassword, paid, favArray = [] } = req.body;
         if (email) email = email.toLowerCase();
 
         if (!email || !password || !repeatPassword || typeof paid !== "boolean")
@@ -93,13 +93,15 @@ app.post("/signup", async (req, res) => {
         if (password !== repeatPassword)
             return res.status(400).json({ message: "Passwords do not match" });
 
+        if (favArray.length > 50) // limit for favorite movies.
+            return res.status(400).json({ message: "Too many favorite movies" });
+
         const exists = await User.findOne({ email });
         if (exists) return res.status(409).json({ message: "Email already exists." });
 
-        // Hash the password before saving
         const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
 
-        const newUser = new User({ email, password: hashedPassword, paid });
+        const newUser = new User({ email, password: hashedPassword, paid, favArray });
         await newUser.save();
         await syncUsersJson();
 

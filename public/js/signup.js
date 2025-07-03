@@ -54,7 +54,7 @@ async function handleSignup() {
     const res = await fetch("/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password, repeatPassword, paid: paidStatus }),
+        body: JSON.stringify({ email, password, repeatPassword, paid: paidStatus, favArray: [] }),
     });
 
     const data = await res.json();
