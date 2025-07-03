@@ -41,5 +41,21 @@
     "paid": false,
     "favArray": [],
     "__v": 0
+  },
+  {
+    "_id": "686692ac02096c61c9351854",
+    "email": "mike@mike2",
+    "password": "$2b$10$Be/6mjahlMIxppLMr5J8zO8HgbOY7kxmVuXNgISTJtnBFJa6q.Q/O",
+    "paid": true,
+    "__v": 1,
+    "favArray": []
+  },
+  {
+    "_id": "6866eea606fe269c42a634bd",
+    "email": "@",
+    "password": "$2b$10$73Tdz0wDdX.80VrWCGDrAuGTXxIaC9v2Jyc10OXhNZU2k8uhho.gq",
+    "paid": true,
+    "favArray": [],
+    "__v": 0
   }
 ]

@@ -247,7 +247,10 @@ cards.forEach(card => {
 });
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// for rating:
+// for click on search and goes to IMDB
+document.getElementById("searchText").addEventListener("click", function () {
+  window.location.href = "searchIMDB.html"; // Replace with your desired page
+});
 
 
 

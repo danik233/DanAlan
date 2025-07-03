@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Search with Scroll Fix & Load More</title>
+  <link rel="stylesheet" href="css/styleIMDB.css" />
+</head>
+<body>
+  <header>
+    <h1>Movie Search</h1>
+    <nav><a href="favoriteIMDB.html">♥ Favorites</a></nav>
+  </header>
+
+  <main>
+    <div class="controls">
+      <input id="searchInput" placeholder="Type to search…" autocomplete="off" />
+      <button id="filterBtn">Filter</button>
+      <div id="filterPanel" class="hidden">
+        <h3>Filter by Genre</h3>
+        <div id="genreCheckboxes"></div>
+      </div>
+    </div>
+
+    <div id="mainContent"></div>
+    <button id="loadMoreBtn" class="hidden">Load More</button>
+  </main>
+
+  <script src="js/searchIMDB.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+
+html {
+    /* always show vertical scrollbar to prevent layout shift */
+    overflow-y: scroll;
+}
+
+body {
+    background: #121212;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+#filterBtn {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#filterPanel {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #db6868;
+    padding: 10px;
+    border-radius: 6px;
+    width: 250px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+#genreCheckboxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.movie,
+.favorite-movie,
+.movie-box {
+    display: flex;
+    gap: 15px;
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.movie img,
+.movie-box img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.favorite-movie img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.movieText,
+.movie-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.fav-btn,
+.remove-btn {
+    max-width: 150px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.fav-btn:disabled {
+    cursor: default;
+    background-color: green;
+    color: black;
+    opacity: 1;
+}
+
+#loadMoreBtn {
+    background-color: rgb(245, 197, 24);
+    display: flex;
+    justify-self: center;
+    max-width: 150px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+

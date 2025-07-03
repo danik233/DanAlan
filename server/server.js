@@ -126,11 +126,15 @@ app.get("/api/users", async (req, res) => {
     }
 });
 
+
+
+
+
 // ✅ Update user (hash new password if changed)
 app.put("/api/users/:email", async (req, res) => {
     try {
         const userEmail = decodeURIComponent(req.params.email).toLowerCase();
-        const { newEmail, newPassword, newPaid } = req.body;
+        const { newEmail, newPassword, newPaid, newFavArray } = req.body;
 
         const user = await User.findOne({ email: userEmail });
         if (!user) return res.status(404).json({ error: "User not found" });
@@ -146,6 +150,12 @@ app.put("/api/users/:email", async (req, res) => {
         }
 
         if (typeof newPaid === "boolean") user.paid = newPaid;
+
+        if (Array.isArray(newFavArray)) {
+            if (newFavArray.length > 50) // optional limit
+                return res.status(400).json({ error: "Too many favorite movies" });
+            user.favArray = newFavArray;
+        }
 
         await user.save();
         await syncUsersJson();
