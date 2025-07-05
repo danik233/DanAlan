@@ -9,7 +9,7 @@ const User = require("./modules/user");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const SALT_ROUNDS = 10; // bcrypt cost factor
+const SALT_ROUNDS = 10;
 
 // ⛔ Block direct access to JSON files
 app.use((req, res, next) => {
@@ -29,7 +29,7 @@ mongoose.connect(process.env.MONGO_URI, {
     .then(() => console.log("✅ Connected to MongoDB"))
     .catch(err => console.error("❌ MongoDB connection error:", err));
 
-// ✅ Save users.json to data folder
+// ✅ Sync users.json file
 async function syncUsersJson() {
     try {
         const users = await User.find({}).lean();
@@ -40,7 +40,7 @@ async function syncUsersJson() {
     }
 }
 
-// Routes to serve frontend pages
+// Frontend routes
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public", "index.html"));
 });
@@ -53,7 +53,7 @@ app.get("/homepage.html", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "public", "homepage.html"));
 });
 
-// ✅ Login endpoint
+// ✅ Login
 app.post("/login", async (req, res) => {
     try {
         let { email, password } = req.body;
@@ -62,14 +62,12 @@ app.post("/login", async (req, res) => {
         if (!email || !password)
             return res.status(400).json({ message: "Email and password required" });
 
-        // Optional admin hardcoded login — consider removing or hashing in production
         if (email === "admin@admin" && password === "admin")
             return res.json({ role: "admin", message: "Admin login successful", redirect: "/admin.html" });
 
         const user = await User.findOne({ email });
         if (!user) return res.status(404).json({ message: "User not found. Please signup." });
 
-        // Verify password with bcrypt
         const passwordMatch = await bcrypt.compare(password, user.password);
         if (!passwordMatch) return res.status(401).json({ message: "Incorrect password." });
 
@@ -81,7 +79,7 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// ✅ Signup endpoint with password hashing
+// ✅ Signup
 app.post("/signup", async (req, res) => {
     try {
         let { email, password, repeatPassword, paid, favArray = [] } = req.body;
@@ -93,7 +91,7 @@ app.post("/signup", async (req, res) => {
         if (password !== repeatPassword)
             return res.status(400).json({ message: "Passwords do not match" });
 
-        if (favArray.length > 50) // limit for favorite movies.
+        if (favArray.length > 50)
             return res.status(400).json({ message: "Too many favorite movies" });
 
         const exists = await User.findOne({ email });
@@ -114,7 +112,7 @@ app.post("/signup", async (req, res) => {
     }
 });
 
-// ✅ Get all users (admin)
+// ✅ Admin – Get all users
 app.get("/api/users", async (req, res) => {
     try {
         const users = await User.find({}).lean();
@@ -126,11 +124,7 @@ app.get("/api/users", async (req, res) => {
     }
 });
 
-
-
-
-
-// ✅ Update user (hash new password if changed)
+// ✅ Update user
 app.put("/api/users/:email", async (req, res) => {
     try {
         const userEmail = decodeURIComponent(req.params.email).toLowerCase();
@@ -152,7 +146,7 @@ app.put("/api/users/:email", async (req, res) => {
         if (typeof newPaid === "boolean") user.paid = newPaid;
 
         if (Array.isArray(newFavArray)) {
-            if (newFavArray.length > 50) // optional limit
+            if (newFavArray.length > 50)
                 return res.status(400).json({ error: "Too many favorite movies" });
             user.favArray = newFavArray;
         }
@@ -183,7 +177,7 @@ app.delete("/api/users/:email", async (req, res) => {
     }
 });
 
-// Start server
+// ✅ Start server
 app.listen(PORT, () => {
     console.log(`🚀 Server running at http://localhost:${PORT}`);
 });

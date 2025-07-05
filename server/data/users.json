@@ -1,61 +1,220 @@
 [
   {
-    "_id": "686665f9ca980bd68672516e",
-    "email": "srk",
-    "password": "$2b$10$Qs0Aw/Jljxrud7Dyal5gMO1b.3Pwhw3VUiOX.adbxv54HNxKRlnFK",
+    "_id": "6868e5ede8904c47179532aa",
+    "email": "#",
+    "password": "$2b$10$k1fDWzt/Fg2D0jVqcrRaq.kgYL/XDgGy89k/q0X5I1n9VdZJbDQKm",
     "paid": true,
+    "favArray": [],
     "__v": 0
   },
   {
-    "_id": "686667710b0892319c093103",
-    "email": "hello@world",
-    "password": "$2b$10$syamRCpcdFPwC6wqGc5iE.eXtj0JfKnkUdZ5FoDy9IAxgq94da7Km",
+    "_id": "6868e7302e48f1d9830b9e99",
+    "email": "90",
+    "password": "$2b$10$m19qyV9MOwBL6Zm3TRyb.OBzHHsM1JegnA/l9O3GUKsN/VnCE8O1a",
     "paid": true,
-    "__v": 0
+    "favArray": [
+      {
+        "Title": "Ace Ventura: Pet Detective",
+        "Year": "1994",
+        "Rated": "PG-13",
+        "Released": "04 Feb 1994",
+        "Runtime": "86 min",
+        "Genre": "Comedy",
+        "Director": "Tom Shadyac",
+        "Writer": "Jack Bernstein, Tom Shadyac, Jim Carrey",
+        "Actors": "Jim Carrey, Courteney Cox, Sean Young",
+        "Plot": "A goofy detective specializing in animals goes in search of the missing mascot of the Miami Dolphins.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "5 wins & 6 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOWU1M2Q5MDgtOTkxZS00NjdmLWFlNWEtOGEyOTNlNGYyYTZlXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "48%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "37/100"
+          }
+        ],
+        "Metascore": "37",
+        "imdbRating": "6.9",
+        "imdbVotes": "340,938",
+        "imdbID": "tt0109040",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$72,217,396",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
+    "__v": 3
   },
   {
-    "_id": "686667d30b0892319c09311b",
+    "_id": "6868e85be10e6bd0bccaea10",
     "email": "1",
-    "password": "$2b$10$Wpv55TH2U.z11Jr9g86HSe3BJebDUJPPIE0KLyjkTBssnHcr7gdLO",
-    "paid": false,
-    "__v": 0
-  },
-  {
-    "_id": "6866714dd0b57ba3565bce7e",
-    "email": "new",
-    "password": "$2b$10$HVp6tLtothTXCzsC8GvP4eGg9R5.x4UNb4h9HgEuLKnQr9pFdj4I6",
-    "paid": false,
-    "__v": 0
-  },
-  {
-    "_id": "68667251d0b57ba3565bce87",
-    "email": "estermor16@gmail.com",
-    "password": "$2b$10$dZttIBBLQlmd/k4g9iQX3.GoCrXnig706GF966CuoQVb4YaRWJvNy",
+    "password": "$2b$10$bnABlOInza0QxD0LVTftdurXMc1mL3Zoike6XpvJyUw2llwC07q.a",
     "paid": true,
-    "__v": 0
-  },
-  {
-    "_id": "68668fa1c931bde6a825bd7c",
-    "email": "9",
-    "password": "$2b$10$SM.csmnqhjpBIOBR2mBR5OjEcm59t1ucACO.I4uWTJ1K5j.u/EY4a",
-    "paid": false,
-    "favArray": [],
-    "__v": 0
-  },
-  {
-    "_id": "686692ac02096c61c9351854",
-    "email": "mike@mike2",
-    "password": "$2b$10$Be/6mjahlMIxppLMr5J8zO8HgbOY7kxmVuXNgISTJtnBFJa6q.Q/O",
-    "paid": true,
-    "__v": 1,
-    "favArray": []
-  },
-  {
-    "_id": "6866eea606fe269c42a634bd",
-    "email": "@",
-    "password": "$2b$10$73Tdz0wDdX.80VrWCGDrAuGTXxIaC9v2Jyc10OXhNZU2k8uhho.gq",
-    "paid": true,
-    "favArray": [],
-    "__v": 0
+    "favArray": [
+      {
+        "Title": "Ace Ventura: Pet Detective",
+        "Year": "1994",
+        "Rated": "PG-13",
+        "Released": "04 Feb 1994",
+        "Runtime": "86 min",
+        "Genre": "Comedy",
+        "Director": "Tom Shadyac",
+        "Writer": "Jack Bernstein, Tom Shadyac, Jim Carrey",
+        "Actors": "Jim Carrey, Courteney Cox, Sean Young",
+        "Plot": "A goofy detective specializing in animals goes in search of the missing mascot of the Miami Dolphins.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "5 wins & 6 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOWU1M2Q5MDgtOTkxZS00NjdmLWFlNWEtOGEyOTNlNGYyYTZlXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "48%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "37/100"
+          }
+        ],
+        "Metascore": "37",
+        "imdbRating": "6.9",
+        "imdbVotes": "340,938",
+        "imdbID": "tt0109040",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$72,217,396",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "www.XXX.com",
+        "Year": "2003",
+        "Rated": "N/A",
+        "Released": "27 Aug 2003",
+        "Runtime": "105 min",
+        "Genre": "Drama, Romance",
+        "Director": "Tikoy Aguiluz",
+        "Writer": "Jasmin Coles, Angelo Lacuesta",
+        "Actors": "Gary Estrada, Angelu De Leon, Rey 'PJ' Abellana",
+        "Plot": "A Filipino-American girl escapes the consequences of her State-side abortion by going back to her home country. She is soon in the clutches of a smooth cybercafe owner who introduces her to WebDiva. Com.",
+        "Language": "Tagalog, Filipino",
+        "Country": "Philippines",
+        "Awards": "1 win total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ0ZjliYjktMTRmMy00NWQ4LTk3MDQtN2Y3OTg2MDUzY2M0XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "4.9/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "4.9",
+        "imdbVotes": "438",
+        "imdbID": "tt0371881",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Ace Ventura: When Nature Calls",
+        "Year": "1995",
+        "Rated": "PG-13",
+        "Released": "10 Nov 1995",
+        "Runtime": "90 min",
+        "Genre": "Adventure, Comedy, Crime",
+        "Director": "Steve Oedekerk",
+        "Writer": "Jack Bernstein, Steve Oedekerk",
+        "Actors": "Jim Carrey, Ian McNeice, Simon Callow",
+        "Plot": "Ace Ventura, Pet Detective, returns from a spiritual quest to investigate the disappearance of a rare white bat, the sacred animal of a tribe in Africa.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "7 wins & 6 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjk3ZDUwYTMtYmQyYy00NTg1LWExOTItNTcxODM3NDZiNjMyXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.4/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "23%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "43/100"
+          }
+        ],
+        "Metascore": "43",
+        "imdbRating": "6.4",
+        "imdbVotes": "242,520",
+        "imdbID": "tt0112281",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$108,385,533",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Ace in the Hole",
+        "Year": "1951",
+        "Rated": "Approved",
+        "Released": "04 Jul 1951",
+        "Runtime": "111 min",
+        "Genre": "Drama, Film-Noir",
+        "Director": "Billy Wilder",
+        "Writer": "Billy Wilder, Lesser Samuels, Walter Newman",
+        "Actors": "Kirk Douglas, Jan Sterling, Robert Arthur",
+        "Plot": "Frustrated former journalist Chuck Tatum now working for an Albuquerque newspaper exploits a story about trading post owner Leo Minosa trapped in a cave to rekindle Chuck's career, but the story soon escalates into a media circus.",
+        "Language": "English, Spanish, Latin",
+        "Country": "United States",
+        "Awards": "Nominated for 1 Oscar. 4 wins & 3 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDY5MmVmODktYjg5Yi00ZDg4LThiOGItN2MzOWViZjVjMGUwXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.1/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "90%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "72/100"
+          }
+        ],
+        "Metascore": "72",
+        "imdbRating": "8.1",
+        "imdbVotes": "40,295",
+        "imdbID": "tt0043338",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
+    "__v": 3
   }
 ]

@@ -1,6 +1,5 @@
 const loginBtn = document.getElementById("loginBtn");
 
-// Function to handle login
 async function handleLogin() {
     const emailInput = document.getElementById("emailInput");
     const passInput = document.getElementById("passInput");
@@ -14,7 +13,7 @@ async function handleLogin() {
     }
 
     try {
-        const response = await fetch("/login", {  // <-- changed here: relative URL
+        const response = await fetch("/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -29,8 +28,13 @@ async function handleLogin() {
             return;
         }
 
+        sessionStorage.setItem("email", email);
+        if (data.role) sessionStorage.setItem("role", data.role);
+
         alert(data.message || "Login successful.");
+
         if (data.redirect) {
+            await syncLocalFavoritesToMongo(email);  // 🔄 Sync localStorage to MongoDB
             window.location.href = data.redirect;
         }
 
@@ -40,10 +44,9 @@ async function handleLogin() {
     }
 }
 
-// Handle login button click
 loginBtn.addEventListener("click", handleLogin);
 
-// Handle Enter key on both input fields
+// Enter key support
 ["emailInput", "passInput"].forEach(id => {
     const input = document.getElementById(id);
     input.addEventListener("keydown", (e) => {
@@ -53,7 +56,31 @@ loginBtn.addEventListener("click", handleLogin);
     });
 });
 
-// Navigate to signup page
 document.getElementById("signupBtn").addEventListener("click", () => {
     window.location.href = "signup.html";
 });
+
+async function syncLocalFavoritesToMongo(email) {
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+    if (!favorites.length) return;
+
+    try {
+        const res = await fetch(`/api/users/${encodeURIComponent(email)}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ newFavArray: favorites })
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+            console.log("✅ Synced local favorites to MongoDB after login");
+        } else {
+            console.error("❌ Failed to sync favorites:", data.error || data.message);
+        }
+    } catch (err) {
+        console.error("❌ Error syncing favorites:", err);
+    }
+}
