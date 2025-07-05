@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const res = await fetch("/api/users"); // <-- relative URL now
+        const res = await fetch("/api/users");
         if (!res.ok) throw new Error("Failed to fetch users");
         const users = await res.json();
         const table = document.querySelector("table");
@@ -10,9 +10,34 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         users.forEach(user => {
             const row = document.createElement("tr");
+
+            // Render favorite movies as poster thumbnails
+            let favHtml = "None";
+            if (Array.isArray(user.favArray) && user.favArray.length > 0) {
+                favHtml = "<div style='display: flex; flex-wrap: wrap; gap: 8px;'>";
+                favHtml += user.favArray.map(fav => {
+                    const title = fav.Title || "Untitled";
+                    const imdbID = fav.imdbID || "#";
+                    const poster = fav.Poster && fav.Poster !== "N/A" ? fav.Poster : "error-img.png";
+
+                    return `
+                        <a href="movieIMDB.html?imdbID=${imdbID}" target="_blank" title="${title}">
+                            <img 
+                                src="${poster}" 
+                                alt="${title}" 
+                                style="width: 60px; height: 90px; object-fit: cover; border-radius: 4px; box-shadow: 0 0 4px rgba(0,0,0,0.3);" 
+                                onerror="this.src='error-img.png';"
+                            />
+                        </a>
+                    `;
+                }).join("");
+                favHtml += "</div>";
+            }
+
             row.innerHTML = `
                 <td>${user.email}</td>
                 <td>${user.paid ? "✅" : "❌"}</td>
+                <td>${favHtml}</td>
                 <td>
                     <button onclick="deleteUser('${user.email}')">🗑️</button>
                     <button onclick="changeUser('${user.email}')">✏️</button>
@@ -61,3 +86,4 @@ async function changeUser(email) {
         alert("Failed to update user");
     }
 }
+
