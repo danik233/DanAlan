@@ -17,25 +17,42 @@ function applyMode(isDark) {
     const header = document.querySelector("header");
     const sidebar = document.getElementById("sidebar");
     const mainWrap = document.querySelector(".mainWrap");
-    const mainWrapRating = document.querySelector(".mainWrapRating"); 
+    const mainWrapRating = document.querySelector(".mainWrapRating");
     const paragraphs = document.querySelectorAll("p");
     const brgrBtn = document.getElementById("burgerBtn");
+    const israTubeText = document.getElementById("israTubeText");
+    const searchIMDBbody = document.getElementById("searchIMDB-body");
 
     if (isDark) {
         header.style.backgroundColor = "#393E46";
-        sidebar.style.backgroundColor = "#393E46";
+        if (sidebar) sidebar.style.backgroundColor = "#393E46";
         if (mainWrap) mainWrap.style.backgroundColor = "#222831";
-        if (mainWrapRating) mainWrapRating.style.backgroundColor = "#222831"; 
-        brgrBtn.style.color = "#ffffff";
+        if (mainWrapRating) mainWrapRating.style.backgroundColor = "#222831";
+        if (brgrBtn) brgrBtn.style.color = "#ffffff";
         paragraphs.forEach(p => p.style.color = "white");
+        if (israTubeText) israTubeText.style.color = "white";
+        if (searchIMDBbody) searchIMDBbody.style.backgroundColor = "black";
     } else {
         header.style.backgroundColor = "#ffffff";
-        sidebar.style.backgroundColor = "#ffffff";
+        if (sidebar) sidebar.style.backgroundColor = "#ffffff";
         if (mainWrap) mainWrap.style.backgroundColor = "#F5F5F5";
         if (mainWrapRating) mainWrapRating.style.backgroundColor = "#F5F5F5";
-        brgrBtn.style.color = "#000000";
+        if (brgrBtn) brgrBtn.style.color = "#000000";
         paragraphs.forEach(p => p.style.color = "black");
+        if (israTubeText) israTubeText.style.color = "black";
+        if (searchIMDBbody) searchIMDBbody.style.backgroundColor = "white";
     }
+    // Update movie cards dynamically when mode changes
+    const movieCards = document.querySelectorAll(".movie");
+    movieCards.forEach(card => {
+        card.style.backgroundColor = isDark ? "#333333" : "#999999";
+
+        const textElements = card.querySelectorAll('.movieText p, .movieText h2');
+        textElements.forEach(el => {
+            el.style.color = isDark ? 'white' : 'black';
+        });
+    });
+
 }
 
 
@@ -249,7 +266,7 @@ cards.forEach(card => {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // for click on search and goes to IMDB
 document.getElementById("searchText").addEventListener("click", function () {
-  window.location.href = "searchIMDB.html"; // Replace with your desired page
+    window.location.href = "searchIMDB.html"; // Replace with your desired page
 });
 
 

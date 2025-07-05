@@ -1,31 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Movie Search with Scroll Fix & Load More</title>
-  <link rel="stylesheet" href="css/styleIMDB.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="css/styleIMDB.css" />
 </head>
-<body>
-  <header>
-    <h1>Movie Search</h1>
-    <nav><a href="favoriteIMDB.html">♥ Favorites</a></nav>
-  </header>
 
-  <main>
-    <div class="controls">
-      <input id="searchInput" placeholder="Type to search…" autocomplete="off" />
-      <button id="filterBtn">Filter</button>
-      <div id="filterPanel" class="hidden">
-        <h3>Filter by Genre</h3>
-        <div id="genreCheckboxes"></div>
-      </div>
-    </div>
+<body id="searchIMDB-body">
+    <header>
 
-    <div id="mainContent"></div>
-    <button id="loadMoreBtn" class="hidden">Load More</button>
-  </main>
+        <section class="buttonANDlogo">
+            <a href="homepage.html"
+                style="width: 45px; height: 45px; font-size: 35px; background-color: transparent; border: none;">
+                <p id="israTubeText">◀</p>
+            </a>
+            <a href="homepage.html">
+                <p id="israTubeText">Search🍿</p>
+            </a>
+        </section>
 
-  <script src="js/searchIMDB.js"></script>
+        <section class="searchSystem">
+            <div class="controls">
+                <input id="searchInput" placeholder="Type to search…" autocomplete="off">
+                <button id="filterBtn">Filter</button>
+                <div id="filterPanel" class="hidden">
+                    <h3>Filter by Genre</h3>
+                    <div id="genreCheckboxes"></div>
+                </div>
+            </div>
+            <a id="search-goto-fav" href="favoriteIMDB.html">Favorites</a>
+
+        </section>
+
+
+
+
+        <section class="loginSystem">
+            <input id="moonDark" type="image" src="images/moonWhiteIcon.png" alt="darkmode" width="45" height="45">
+
+            <section id="profileArea">
+                <input id="profileIcon" type="image" src="images/profileIcon.png" alt="profile">
+                <a href="index.html" id="logoutLink">Logout</a>
+            </section>
+        </section>
+
+        <!-- <button id="loginBtn" onclick='window.location.href="index.html"'>Login</button> -->
+        </section>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <main id="searchIMDBmain">
+        <!-- <div class="controls">
+            <input id="searchInput" placeholder="Type to search…" autocomplete="off">
+            <button id="filterBtn">Filter</button>
+            <div id="filterPanel" class="hidden">
+                <h3>Filter by Genre</h3>
+                <div id="genreCheckboxes"></div>
+            </div>
+        </div> -->
+
+        <div id="mainContent"></div>
+        <button id="loadMoreBtn" class="hidden">Load More</button>
+    </main>
+
+    <script src="js/searchIMDB.js"></script>
+    <script src="js/home.js"></script>
 </body>
+
 </html>

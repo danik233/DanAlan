@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 favHtml += user.favArray.map(fav => {
                     const title = fav.Title || "Untitled";
                     const imdbID = fav.imdbID || "#";
-                    const poster = fav.Poster && fav.Poster !== "N/A" ? fav.Poster : "error-img.png";
+                    const poster = fav.Poster && fav.Poster !== "N/A" ? fav.Poster : "images/error-img.png";
 
                     return `
                         <a href="movieIMDB.html?imdbID=${imdbID}" target="_blank" title="${title}">
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 src="${poster}" 
                                 alt="${title}" 
                                 style="width: 60px; height: 90px; object-fit: cover; border-radius: 4px; box-shadow: 0 0 4px rgba(0,0,0,0.3);" 
-                                onerror="this.src='error-img.png';"
+                                onerror="this.src='images/error-img.png';"
                             />
                         </a>
                     `;

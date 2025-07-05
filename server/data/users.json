@@ -4,14 +4,6 @@
     "email": "#",
     "password": "$2b$10$k1fDWzt/Fg2D0jVqcrRaq.kgYL/XDgGy89k/q0X5I1n9VdZJbDQKm",
     "paid": true,
-    "favArray": [],
-    "__v": 0
-  },
-  {
-    "_id": "6868eb508b65f3445f3ab923",
-    "email": "alan",
-    "password": "$2b$10$QvKi1ENNwoOrU3t8bK8g6.AMCf9jz6qwLDvm4WWa3alxzaTZCmaxy",
-    "paid": true,
     "favArray": [
       {
         "Title": "Ace Ventura: Pet Detective",
@@ -52,532 +44,9 @@
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True"
-      },
-      {
-        "Title": "www.XXX.com",
-        "Year": "2003",
-        "Rated": "N/A",
-        "Released": "27 Aug 2003",
-        "Runtime": "105 min",
-        "Genre": "Drama, Romance",
-        "Director": "Tikoy Aguiluz",
-        "Writer": "Jasmin Coles, Angelo Lacuesta",
-        "Actors": "Gary Estrada, Angelu De Leon, Rey 'PJ' Abellana",
-        "Plot": "A Filipino-American girl escapes the consequences of her State-side abortion by going back to her home country. She is soon in the clutches of a smooth cybercafe owner who introduces her to WebDiva. Com.",
-        "Language": "Tagalog, Filipino",
-        "Country": "Philippines",
-        "Awards": "1 win total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ0ZjliYjktMTRmMy00NWQ4LTk3MDQtN2Y3OTg2MDUzY2M0XkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "4.9/10"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "4.9",
-        "imdbVotes": "438",
-        "imdbID": "tt0371881",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Ace Ventura: When Nature Calls",
-        "Year": "1995",
-        "Rated": "PG-13",
-        "Released": "10 Nov 1995",
-        "Runtime": "90 min",
-        "Genre": "Adventure, Comedy, Crime",
-        "Director": "Steve Oedekerk",
-        "Writer": "Jack Bernstein, Steve Oedekerk",
-        "Actors": "Jim Carrey, Ian McNeice, Simon Callow",
-        "Plot": "Ace Ventura, Pet Detective, returns from a spiritual quest to investigate the disappearance of a rare white bat, the sacred animal of a tribe in Africa.",
-        "Language": "English",
-        "Country": "United States",
-        "Awards": "7 wins & 6 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMjk3ZDUwYTMtYmQyYy00NTg1LWExOTItNTcxODM3NDZiNjMyXkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "6.4/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "23%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "43/100"
-          }
-        ],
-        "Metascore": "43",
-        "imdbRating": "6.4",
-        "imdbVotes": "242,520",
-        "imdbID": "tt0112281",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "$108,385,533",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Ace in the Hole",
-        "Year": "1951",
-        "Rated": "Approved",
-        "Released": "04 Jul 1951",
-        "Runtime": "111 min",
-        "Genre": "Drama, Film-Noir",
-        "Director": "Billy Wilder",
-        "Writer": "Billy Wilder, Lesser Samuels, Walter Newman",
-        "Actors": "Kirk Douglas, Jan Sterling, Robert Arthur",
-        "Plot": "Frustrated former journalist Chuck Tatum now working for an Albuquerque newspaper exploits a story about trading post owner Leo Minosa trapped in a cave to rekindle Chuck's career, but the story soon escalates into a media circus.",
-        "Language": "English, Spanish, Latin",
-        "Country": "United States",
-        "Awards": "Nominated for 1 Oscar. 4 wins & 3 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMDY5MmVmODktYjg5Yi00ZDg4LThiOGItN2MzOWViZjVjMGUwXkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.1/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "90%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "72/100"
-          }
-        ],
-        "Metascore": "72",
-        "imdbRating": "8.1",
-        "imdbVotes": "40,295",
-        "imdbID": "tt0043338",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "My Name Is Khan",
-        "Year": "2010",
-        "Rated": "PG-13",
-        "Released": "12 Feb 2010",
-        "Runtime": "165 min",
-        "Genre": "Drama, Romance",
-        "Director": "Karan Johar",
-        "Writer": "Shibani Bathija, Niranjan Iyengar",
-        "Actors": "Shah Rukh Khan, Kajol, Sheetal Menon",
-        "Plot": "Rizwan Khan is a Muslim immigrant to the US with Asperger's syndrome. After his family falls apart in the aftermath of 9/11, he begins an epic quest across the country to speak to the President of the United States and clear his n...",
-        "Language": "Hindi, English",
-        "Country": "India, United Arab Emirates, United States, China",
-        "Awards": "25 wins & 36 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMTUyMTA4NDYzMV5BMl5BanBnXkFtZTcwMjk5MzcxMw@@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "7.9/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "86%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "50/100"
-          }
-        ],
-        "Metascore": "50",
-        "imdbRating": "7.9",
-        "imdbVotes": "118,527",
-        "imdbID": "tt1188996",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "$4,018,771",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Star Trek II: The Wrath of Khan",
-        "Year": "1982",
-        "Rated": "PG",
-        "Released": "04 Jun 1982",
-        "Runtime": "113 min",
-        "Genre": "Action, Adventure, Sci-Fi",
-        "Director": "Nicholas Meyer",
-        "Writer": "Gene Roddenberry, Jack B. Sowards, Harve Bennett",
-        "Actors": "William Shatner, Leonard Nimoy, DeForest Kelley",
-        "Plot": "With the assistance of the Enterprise crew, Admiral Kirk must stop an old nemesis, Khan Noonien Singh, from using the life-generating Genesis Device as the ultimate weapon.",
-        "Language": "English",
-        "Country": "United States",
-        "Awards": "5 wins & 9 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BOTFkZDY5NWQtMjY4Yy00OThiLTk3YjQtMDdhYTllMTI4MTdiXkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "7.7/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "86%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "68/100"
-          }
-        ],
-        "Metascore": "68",
-        "imdbRating": "7.7",
-        "imdbVotes": "133,085",
-        "imdbID": "tt0084726",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "$79,707,906",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Mongol: The Rise of Genghis Khan",
-        "Year": "2007",
-        "Rated": "R",
-        "Released": "04 Jul 2008",
-        "Runtime": "126 min",
-        "Genre": "Action, Biography, Drama",
-        "Director": "Sergei Bodrov",
-        "Writer": "Arif Aliev, Sergei Bodrov",
-        "Actors": "Tadanobu Asano, Amadu Mamadakov, Khulan Chuluun",
-        "Plot": "The story recounts the early life of Genghis Khan who was a slave before going on to conquer half the world in 1206.",
-        "Language": "Mongolian, Mandarin",
-        "Country": "Russia, Germany, Kazakhstan",
-        "Awards": "Nominated for 1 Oscar. 16 wins & 13 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BOTc3ZmVhYTYtZjk5OC00ZjdlLTkzNjItZGFjM2JmZjIzMGMzXkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "7.2/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "86%"
-          },
-          {
-            "Source": "Metacritic",
-            "Value": "74/100"
-          }
-        ],
-        "Metascore": "74",
-        "imdbRating": "7.2",
-        "imdbVotes": "50,491",
-        "imdbID": "tt0416044",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "$5,705,761",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Tees Maar Khan",
-        "Year": "2010",
-        "Rated": "Not Rated",
-        "Released": "24 Dec 2010",
-        "Runtime": "135 min",
-        "Genre": "Comedy, Crime",
-        "Director": "Farah Khan",
-        "Writer": "Vishal Dadlani, Anvita Dutt, Ashmith Kunder",
-        "Actors": "Akshay Kumar, Katrina Kaif, Akshaye Khanna",
-        "Plot": "Posing as a movie director, a conman attempts to trick an entire village into helping him rob a treasure-laden train.",
-        "Language": "Hindi",
-        "Country": "India",
-        "Awards": "11 wins & 13 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNTk1NTM5NDYwNl5BMl5BanBnXkFtZTcwMDI2MTYxNA@@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "2.8/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "8%"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "2.8",
-        "imdbVotes": "15,177",
-        "imdbID": "tt1572311",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "$1,076,443",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Zakir Khan: Tathastu",
-        "Year": "2022",
-        "Rated": "N/A",
-        "Released": "01 Dec 2022",
-        "Runtime": "94 min",
-        "Genre": "Comedy",
-        "Director": "N/A",
-        "Writer": "Zakir Khan",
-        "Actors": "Zakir Khan",
-        "Plot": "Zakir talks about his experience of growing up with his grand-father and the influence he had on his life.",
-        "Language": "Hindi",
-        "Country": "India",
-        "Awards": "1 nomination total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNWY2MjU3OTAtMjcxZi00OWJjLThkNjEtZjgxNDE3ODFjYTY3XkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "9.0/10"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "9.0",
-        "imdbVotes": "4,180",
-        "imdbID": "tt23623070",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Zakir Khan: Haq Se Single",
-        "Year": "2017",
-        "Rated": "TV-MA",
-        "Released": "09 Jul 2017",
-        "Runtime": "90 min",
-        "Genre": "Comedy",
-        "Director": "Angshuman Ghosh",
-        "Writer": "Zakir Khan",
-        "Actors": "Zakir Khan",
-        "Plot": "In Haq Se Single, Zakir's narrative takes you through his own journey of becoming the ultimate #SakhtLaunda. The guy who's survived rejection, love, heartbreaks and adulthood - who's single and proud of it!",
-        "Language": "Hindi",
-        "Country": "India",
-        "Awards": "N/A",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMTg1MTg0MGUtYmE3NC00YjgzLWEwNDItYzU1MDQ5MmFiZmMwXkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.5/10"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "8.5",
-        "imdbVotes": "3,128",
-        "imdbID": "tt7020272",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Genghis Khan",
-        "Year": "1965",
-        "Rated": "Approved",
-        "Released": "23 Jun 1965",
-        "Runtime": "120 min",
-        "Genre": "Adventure, Drama, History",
-        "Director": "Henry Levin",
-        "Writer": "Clarke Reynolds, Beverley Cross, Berkely Mather",
-        "Actors": "Stephen Boyd, Omar Sharif, James Mason",
-        "Plot": "During the thirteenth century, the shy Mongol boy Temujin becomes the fearless leader Genghis Khan, who unites all Mongol tribes and conquers most of Asia, Europe, and the Middle East.",
-        "Language": "English",
-        "Country": "United Kingdom, West Germany, Yugoslavia, United States",
-        "Awards": "N/A",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNmU0M2VkY2YtNGY1NS00MDI2LTkxM2YtNzg3MmNlNmJmNDI3XkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "5.8/10"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "5.8",
-        "imdbVotes": "2,615",
-        "imdbID": "tt0059219",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Fanney Khan",
-        "Year": "2018",
-        "Rated": "Not Rated",
-        "Released": "03 Aug 2018",
-        "Runtime": "130 min",
-        "Genre": "Comedy, Drama, Music",
-        "Director": "Atul Manjrekar",
-        "Writer": "Dominique Deruddere, Atul Manjrekar, Hussain Dalal",
-        "Actors": "Aishwarya Rai Bachchan, Anil Kapoor, Rajkummar Rao",
-        "Plot": "Fanney Khan is a struggling singer who wants to make his daughter a big name in music world.",
-        "Language": "N/A",
-        "Country": "India",
-        "Awards": "1 nomination",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNGJkNzJmZmMtZmU4Mi00ZjMzLTk3MjUtODQzOTc4YzY1OGE1XkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "4.5/10"
-          },
-          {
-            "Source": "Rotten Tomatoes",
-            "Value": "60%"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "4.5",
-        "imdbVotes": "2,372",
-        "imdbID": "tt6384386",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Tees Maar Khan",
-        "Year": "2022",
-        "Rated": "N/A",
-        "Released": "19 Aug 2022",
-        "Runtime": "130 min",
-        "Genre": "Action, Drama, Romance",
-        "Director": "Kalyanji Gogana",
-        "Writer": "Kalyanji Gogana",
-        "Actors": "Haji Mohammed, Aadi, Arjun Ambati",
-        "Plot": "A young boy and a girl from two broken families, escaping domestic violence and inhuman treatment, meet on a fateful night and instantly form a bond promising to help each other. She, being the eldest, provides him with food, and ...",
-        "Language": "Telugu",
-        "Country": "India",
-        "Awards": "N/A",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BYjJiZmZkZGYtYjA1OC00MjRkLWFlYTgtYjM4ODBlYWI1MjQwXkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "5.5/10"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "5.5",
-        "imdbVotes": "2,277",
-        "imdbID": "tt21301666",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Zakir Khan: Kaksha Gyarvi",
-        "Year": "2018",
-        "Rated": "TV-MA",
-        "Released": "23 Nov 2018",
-        "Runtime": "74 min",
-        "Genre": "Comedy",
-        "Director": "Angshuman Ghosh",
-        "Writer": "Zakir Khan",
-        "Actors": "Zakir Khan",
-        "Plot": "After the massive success of Haq Se Single, Zakir is back. He is taking a step back, literally. In his latest stand-up special Zakir is taking his fans back to the times of school bags and friendships. He draws up experiences from...",
-        "Language": "English, Hindi",
-        "Country": "India",
-        "Awards": "1 nomination",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BZTk1YTI2YzUtMTE4Yi00MzkyLTg2NTQtMzJkMTk1OWFmZmI0XkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "8.3/10"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "8.3",
-        "imdbVotes": "1,919",
-        "imdbID": "tt9105088",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Shah Rukh Khan: In Love with Germany",
-        "Year": "2008",
-        "Rated": "N/A",
-        "Released": "N/A",
-        "Runtime": "101 min",
-        "Genre": "Documentary",
-        "Director": "Gareth Jefferson Jones",
-        "Writer": "N/A",
-        "Actors": "Karan Johar, Farah Khan, Shah Rukh Khan, Mushtaq Sheikh",
-        "Plot": "N/A",
-        "Language": "English",
-        "Country": "Germany",
-        "Awards": "N/A",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMTc0ODU3MDg2MV5BMl5BanBnXkFtZTgwNjUzODU5NjE@._V1_SX300.jpg",
-        "Ratings": [
-          {
-            "Source": "Internet Movie Database",
-            "Value": "7.3/10"
-          }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "7.3",
-        "imdbVotes": "976",
-        "imdbID": "tt1365038",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-      },
-      {
-        "Title": "Hutututu: Aavi Ramat Ni Rutu",
-        "Year": "2016",
-        "Rated": "N/A",
-        "Released": "01 Jan 2016",
-        "Runtime": "139 min",
-        "Genre": "Comedy, Drama",
-        "Director": "Sheetal Shah",
-        "Writer": "Sheetal Shah",
-        "Actors": "Bansri Bhuptani, Abhay Chandarana, Mehool Desai",
-        "Plot": "Hu Tu Tu Tu is based on youth, relationships, ambitions, and the twists of destiny. A tale - never told before.",
-        "Language": "Gujarati",
-        "Country": "India",
-        "Awards": "N/A",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BZWEyZmI4MTEtZTY1Yy00NjFiLTgzMDgtN2Y5MDM4MThkNzkwXkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [],
-        "Metascore": "N/A",
-        "imdbRating": "N/A",
-        "imdbVotes": "41",
-        "imdbID": "tt5345888",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
       }
     ],
-    "__v": 2
+    "__v": 4
   },
   {
     "_id": "6868eb9e8b65f3445f3ab92e",
@@ -828,5 +297,591 @@
       }
     ],
     "__v": 1
+  },
+  {
+    "_id": "6868f5a1b5b42e8d60763f15",
+    "email": "danik",
+    "password": "$2b$10$Wum/swhb0QV8L/iDR0QCUejZh69FJ.RC9xwKO01BjVvqw7JzQFAiG",
+    "paid": true,
+    "favArray": [
+      {
+        "Title": "My Name Is Khan",
+        "Year": "2010",
+        "Rated": "PG-13",
+        "Released": "12 Feb 2010",
+        "Runtime": "165 min",
+        "Genre": "Drama, Romance",
+        "Director": "Karan Johar",
+        "Writer": "Shibani Bathija, Niranjan Iyengar",
+        "Actors": "Shah Rukh Khan, Kajol, Sheetal Menon",
+        "Plot": "Rizwan Khan is a Muslim immigrant to the US with Asperger's syndrome. After his family falls apart in the aftermath of 9/11, he begins an epic quest across the country to speak to the President of the United States and clear his n...",
+        "Language": "Hindi, English",
+        "Country": "India, United Arab Emirates, United States, China",
+        "Awards": "25 wins & 36 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTUyMTA4NDYzMV5BMl5BanBnXkFtZTcwMjk5MzcxMw@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "7.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "86%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "50/100"
+          }
+        ],
+        "Metascore": "50",
+        "imdbRating": "7.9",
+        "imdbVotes": "118,527",
+        "imdbID": "tt1188996",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$4,018,771",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
+    "__v": 1
+  },
+  {
+    "_id": "6868fa5288c3a1e93b7c65da",
+    "email": "sultan",
+    "password": "$2b$10$a.AppPGsUPSGSUy.oSrl.ukac7h38crJqUhmN0rQs7ZoIS2K7Kp5m",
+    "paid": true,
+    "favArray": [
+      {
+        "Title": "The Bat",
+        "Year": "1959",
+        "Rated": "Approved",
+        "Released": "09 Aug 1959",
+        "Runtime": "80 min",
+        "Genre": "Horror, Mystery, Thriller",
+        "Director": "Crane Wilbur",
+        "Writer": "Crane Wilbur, Mary Roberts Rinehart, Avery Hopwood",
+        "Actors": "Vincent Price, Agnes Moorehead, Gavin Gordon",
+        "Plot": "A crazed killer known as \"The Bat\" is on the loose in a mansion full of people.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNjgwMDc3ZTUtMjNiZi00Y2RhLTgzNDItZjZmYjdkZjE2MmVmXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.0/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "17%"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "6.0",
+        "imdbVotes": "6,482",
+        "imdbID": "tt0052602",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "The Devil Bat",
+        "Year": "1940",
+        "Rated": "Approved",
+        "Released": "13 Dec 1940",
+        "Runtime": "68 min",
+        "Genre": "Horror, Sci-Fi",
+        "Director": "Jean Yarbrough",
+        "Writer": "John T. Neville, George Bricker",
+        "Actors": "Bela Lugosi, Suzanne Kaaren, Dave O'Brien",
+        "Plot": "A mad scientist develops an aftershave lotion that causes his gigantic bats to kill anyone who wears it.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BM2Y5MDM5ZWYtYmNjYS00MjUyLWE2NTQtN2RlMTNjM2VlM2YyXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "5.4/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "60%"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "5.4",
+        "imdbVotes": "3,607",
+        "imdbID": "tt0032390",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "The Vampire Bat",
+        "Year": "1933",
+        "Rated": "Passed",
+        "Released": "10 Jan 1933",
+        "Runtime": "65 min",
+        "Genre": "Drama, Horror, Mystery",
+        "Director": "Frank R. Strayer",
+        "Writer": "Edward T. Lowe Jr.",
+        "Actors": "Lionel Atwill, Fay Wray, Melvyn Douglas",
+        "Plot": "When corpses drained of blood begin to show up in a European village, vampirism is suspected to be responsible.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNjlkMDA0NjUtYWE0OC00NjJmLWE0OGMtYjg2ODhkNjQ4MDM0XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "5.7/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "67%"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "5.7",
+        "imdbVotes": "3,180",
+        "imdbID": "tt0024727",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "The Bat People",
+        "Year": "1974",
+        "Rated": "PG",
+        "Released": "24 Jan 1974",
+        "Runtime": "93 min",
+        "Genre": "Horror, Romance",
+        "Director": "Jerry Jameson",
+        "Writer": "Lou Shaw",
+        "Actors": "Stewart Moss, Marianne McAndrew, Michael Pataki",
+        "Plot": "After being bitten by a bat in a cave, a doctor undergoes an accelerating transformation into a man-bat, which ruins his vacation and causes considerable distress for his wife.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZjJkMGNhMGYtNjg4MS00ODgzLWI1NzQtMzFhNDBmN2EyY2FmXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "2.8/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "2.8",
+        "imdbVotes": "2,702",
+        "imdbID": "tt0071198",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "The Bat Whispers",
+        "Year": "1930",
+        "Rated": "Passed",
+        "Released": "13 Nov 1930",
+        "Runtime": "83 min",
+        "Genre": "Crime, Drama, Horror",
+        "Director": "Roland West",
+        "Writer": "Mary Roberts Rinehart, Avery Hopwood, Roland West",
+        "Actors": "Chester Morris, Una Merkel, William Bakewell",
+        "Plot": "A master criminal terrorizes the occupants of an isolated country mansion.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTUwMjg3NDc2OF5BMl5BanBnXkFtZTgwMzk4ODQwMjE@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.3/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "67%"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "6.3",
+        "imdbVotes": "1,270",
+        "imdbID": "tt0020668",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "The Bat Woman",
+        "Year": "1968",
+        "Rated": "N/A",
+        "Released": "28 Mar 1968",
+        "Runtime": "80 min",
+        "Genre": "Adventure, Horror, Sci-Fi",
+        "Director": "René Cardona",
+        "Writer": "Alfredo Salazar, Bob Kane, Bill Finger",
+        "Actors": "Maura Monti, Roberto Cañedo, Héctor Godoy",
+        "Plot": "Batwoman is called to investigate a whacked-out scientist who is capturing wrestlers and using their spinal fluid to create a Gill Man.",
+        "Language": "Spanish",
+        "Country": "Mexico",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BY2VmMzg2OTYtODk4Ny00Njk2LWI3MjktZDZjOGVlNTQ2MDAwXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "4.8/10"
+          }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "4.8",
+        "imdbVotes": "1,177",
+        "imdbID": "tt0235608",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Ted 2",
+        "Year": "2015",
+        "Rated": "R",
+        "Released": "26 Jun 2015",
+        "Runtime": "115 min",
+        "Genre": "Comedy",
+        "Director": "Seth MacFarlane",
+        "Writer": "Seth MacFarlane, Alec Sulkin, Wellesley Wild",
+        "Actors": "Mark Wahlberg, Seth MacFarlane, Amanda Seyfried",
+        "Plot": "Newlywed couple Ted and Tami-Lynn want to have a baby, but in order to qualify to be a parent, Ted will have to prove he's a person in a court of law.",
+        "Language": "English, Ukrainian",
+        "Country": "United States",
+        "Awards": "3 wins & 4 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjEwMDg3MDk1NF5BMl5BanBnXkFtZTgwNjYyODA1NTE@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.3/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "45%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "48/100"
+          }
+        ],
+        "Metascore": "48",
+        "imdbRating": "6.3",
+        "imdbVotes": "248,946",
+        "imdbID": "tt2637276",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$81,476,385",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Ted",
+        "Year": "2012",
+        "Rated": "R",
+        "Released": "29 Jun 2012",
+        "Runtime": "106 min",
+        "Genre": "Comedy",
+        "Director": "Seth MacFarlane",
+        "Writer": "Seth MacFarlane, Alec Sulkin, Wellesley Wild",
+        "Actors": "Mark Wahlberg, Mila Kunis, Seth MacFarlane",
+        "Plot": "John Bennett, a man whose childhood wish of bringing his teddy bear to life came true, now must decide between keeping the relationship with the bear, Ted or his girlfriend, Lori.",
+        "Language": "English, Japanese, Ukrainian",
+        "Country": "United States",
+        "Awards": "Nominated for 1 Oscar. 13 wins & 28 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMxNTUwOA@@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "69%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "62/100"
+          }
+        ],
+        "Metascore": "62",
+        "imdbRating": "6.9",
+        "imdbVotes": "685,507",
+        "imdbID": "tt1637725",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$218,815,487",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Bill & Ted Face the Music",
+        "Year": "2020",
+        "Rated": "PG-13",
+        "Released": "28 Aug 2020",
+        "Runtime": "91 min",
+        "Genre": "Adventure, Comedy, Music",
+        "Director": "Dean Parisot",
+        "Writer": "Chris Matheson, Ed Solomon",
+        "Actors": "Keanu Reeves, Alex Winter, Kristen Schaal",
+        "Plot": "Once told they'd save the universe during a time-traveling adventure, two would-be rockers from San Dimas, California find themselves as middle-aged dads still trying to crank out a hit song and fulfill their destiny.",
+        "Language": "English, German, Chaozhou, Spanish",
+        "Country": "Bahamas, United States",
+        "Awards": "12 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZTU5NWRkNmEtZmY4Yi00ZTIzLWIxNjUtMzM3ODM2ZTdiOWNhXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "5.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "83%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "65/100"
+          }
+        ],
+        "Metascore": "65",
+        "imdbRating": "5.9",
+        "imdbVotes": "55,068",
+        "imdbID": "tt1086064",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$3,439,660",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Ted Bundy",
+        "Year": "2002",
+        "Rated": "R",
+        "Released": "22 Nov 2002",
+        "Runtime": "99 min",
+        "Genre": "Biography, Crime, Drama",
+        "Director": "Matthew Bright",
+        "Writer": "Stephen Johnston, Matthew Bright",
+        "Actors": "Michael Reilly Burke, Boti Bliss, Julianna McCarthy",
+        "Plot": "The story of serial killer Ted Bundy.",
+        "Language": "English",
+        "Country": "United Kingdom, United States",
+        "Awards": "3 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BYTM4NmQ1ZTMtODU5YS00NzYxLWE4ZjYtNTdkMjA2ZDFhZWVlXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "5.8/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "39%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "37/100"
+          }
+        ],
+        "Metascore": "37",
+        "imdbRating": "5.8",
+        "imdbVotes": "8,415",
+        "imdbID": "tt0284929",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$6,073",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Bob & Carol & Ted & Alice",
+        "Year": "1969",
+        "Rated": "R",
+        "Released": "16 Jan 1970",
+        "Runtime": "105 min",
+        "Genre": "Comedy, Drama, Romance",
+        "Director": "Paul Mazursky",
+        "Writer": "Paul Mazursky, Larry Tucker",
+        "Actors": "Natalie Wood, Robert Culp, Elliott Gould",
+        "Plot": "Trendy West Coasters Bob and Carol are determined to embrace complete openness after a weekend of emotional honesty at a retreat.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "Nominated for 4 Oscars. 4 wins & 12 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNDE3MDdmMTAtNWRhOC00NzI0LThhOTQtZjQxN2RjOTQ3ZjQ1XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.7/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "82%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "72/100"
+          }
+        ],
+        "Metascore": "72",
+        "imdbRating": "6.7",
+        "imdbVotes": "7,682",
+        "imdbID": "tt0064100",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Ace Ventura: When Nature Calls",
+        "Year": "1995",
+        "Rated": "PG-13",
+        "Released": "10 Nov 1995",
+        "Runtime": "90 min",
+        "Genre": "Adventure, Comedy, Crime",
+        "Director": "Steve Oedekerk",
+        "Writer": "Jack Bernstein, Steve Oedekerk",
+        "Actors": "Jim Carrey, Ian McNeice, Simon Callow",
+        "Plot": "Ace Ventura, Pet Detective, returns from a spiritual quest to investigate the disappearance of a rare white bat, the sacred animal of a tribe in Africa.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "7 wins & 6 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjk3ZDUwYTMtYmQyYy00NTg1LWExOTItNTcxODM3NDZiNjMyXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.4/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "23%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "43/100"
+          }
+        ],
+        "Metascore": "43",
+        "imdbRating": "6.4",
+        "imdbVotes": "242,520",
+        "imdbID": "tt0112281",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$108,385,533",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Ace Ventura: Pet Detective",
+        "Year": "1994",
+        "Rated": "PG-13",
+        "Released": "04 Feb 1994",
+        "Runtime": "86 min",
+        "Genre": "Comedy",
+        "Director": "Tom Shadyac",
+        "Writer": "Jack Bernstein, Tom Shadyac, Jim Carrey",
+        "Actors": "Jim Carrey, Courteney Cox, Sean Young",
+        "Plot": "A goofy detective specializing in animals goes in search of the missing mascot of the Miami Dolphins.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "5 wins & 6 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOWU1M2Q5MDgtOTkxZS00NjdmLWFlNWEtOGEyOTNlNGYyYTZlXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "6.9/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "48%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "37/100"
+          }
+        ],
+        "Metascore": "37",
+        "imdbRating": "6.9",
+        "imdbVotes": "340,938",
+        "imdbID": "tt0109040",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$72,217,396",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      },
+      {
+        "Title": "Coco",
+        "Year": "2017",
+        "Rated": "PG",
+        "Released": "22 Nov 2017",
+        "Runtime": "105 min",
+        "Genre": "Animation, Adventure, Drama",
+        "Director": "Lee Unkrich, Adrian Molina",
+        "Writer": "Lee Unkrich, Jason Katz, Matthew Aldrich",
+        "Actors": "Anthony Gonzalez, Gael García Bernal, Benjamin Bratt",
+        "Plot": "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.",
+        "Language": "English, Spanish",
+        "Country": "United States, Mexico",
+        "Awards": "Won 2 Oscars. 112 wins & 42 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDIyM2E2NTAtMzlhNy00ZGUxLWI1NjgtZDY5MzhiMDc5NGU3XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+          {
+            "Source": "Internet Movie Database",
+            "Value": "8.4/10"
+          },
+          {
+            "Source": "Rotten Tomatoes",
+            "Value": "97%"
+          },
+          {
+            "Source": "Metacritic",
+            "Value": "81/100"
+          }
+        ],
+        "Metascore": "81",
+        "imdbRating": "8.4",
+        "imdbVotes": "654,312",
+        "imdbID": "tt2380307",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$210,460,015",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+      }
+    ],
+    "__v": 7
   }
 ]

@@ -1,21 +1,20 @@
-
 html {
-    /* always show vertical scrollbar to prevent layout shift */
     overflow-y: scroll;
 }
 
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#searchIMDB-body {
     background: #121212;
     color: #fff;
     font-family: sans-serif;
     padding: 20px;
     margin: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .controls {
@@ -33,17 +32,25 @@ header {
 
 #filterBtn {
     padding: 8px 12px;
+    background-color: rgb(245, 197, 24);
+    display: flex;
+    justify-self: center;
+    max-width: 150px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
+
 }
 
 #filterPanel {
     position: absolute;
     top: 100%;
     right: 0;
-    background: #db6868;
+    background: #666;
     padding: 10px;
     border-radius: 6px;
-    width: 250px;
+    width: 300px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
@@ -62,11 +69,12 @@ header {
 .movie-box {
     display: flex;
     gap: 15px;
-    background: #1e1e1e;
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
+
+
 
 .movie img,
 .movie-box img {
@@ -74,6 +82,8 @@ header {
     height: 300px;
     object-fit: cover;
 }
+
+
 
 .favorite-movie img {
     width: 100px;
@@ -90,6 +100,7 @@ header {
 .fav-btn,
 .remove-btn {
     max-width: 150px;
+    min-width: 150px;
     padding: 8px 12px;
     border: none;
     border-radius: 4px;
@@ -121,3 +132,249 @@ header {
     display: none !important;
 }
 
+
+
+
+header {
+    display: flex;
+    height: 70px;
+    border: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+/* -------------------------------------------------- Logo */
+.buttonANDlogo {
+    /* background-color: yellow; */
+    display: flex;
+    margin-left: 19px;
+    gap: 35px;
+    align-items: center;
+}
+
+.buttonANDlogo a {
+    /* background-color: cyan; */
+    text-decoration: none;
+    font-family: 'Krona One', sans-serif;
+    font-size: 36px;
+    /* color: #000000; */
+}
+
+/* -------------------------------------------------- Keyboard+search*/
+
+.searchSystem {
+    margin-left: 118px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.searchSystem input#searchInput {
+    background-color: #F5F5F5;
+    width: 444px;
+    height: 40px;
+    padding-left: 20px;
+    border-radius: 20px 0px 0px 20px;
+    border: 1px solid #000000;
+    outline: none;
+    font-size: 20px;
+}
+
+.searchSystem input#keyboardIcon {
+    background-color: #F5F5F5;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 40px;
+}
+
+.searchSystem input#searchIcon {
+    background-color: #F5F5F5;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 10px;
+}
+
+/* -------------------------------------------------- Login */
+
+.loginSystem {
+    /* background-color: yellow; */
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+    padding-right: 20px;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#moonDark {
+    background-color: #5D6163;
+    border-radius: 50%;
+    border: 5px solid #5D6163;
+}
+
+#profileArea {
+    display: flex;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+#profileArea:hover {
+    width: 120px;
+    background-color: #5D6163;
+}
+
+#profileIcon {
+    width: 45px;
+    height: 45px;
+    background-color: #5D6163;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+#logoutLink {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+    color: white;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+/* Show Logout only when expanded */
+#profileArea:hover #logoutLink {
+    opacity: 1;
+}
+
+
+#searchIMDBmain {
+    margin-top: 70px;
+}
+
+
+#backToSearch,
+#search-goto-fav,
+#fav-backto-search {
+    text-decoration: none;
+    background-color: rgb(245, 197, 24);
+    color: black;
+    display: flex;
+    max-width: 200px;
+    justify-content: center;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.trailer-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+.trailer-container iframe {
+    width: 60%;
+    height: 500px;
+}
+
+#movieDetailPage {
+    padding: 0 50px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+
+    .buttonANDlogo>a:not(:first-child) {
+        display: none;
+    }
+
+    #israTubeText {
+        font-size: 30px;
+    }
+
+    .searchSystem {
+        margin-left: 0px;
+    }
+
+    #filterBtn {
+        display: none;
+    }
+
+
+
+    .searchSystem input#searchInput {
+        background-color: #F5F5F5;
+        width: 100%;
+        height: 40px;
+        padding-left: 5px;
+        border-radius: 20px;
+        border: 1px solid #000000;
+        outline: none;
+        font-size: 15px;
+    }
+
+
+    .loginSystem {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #profileArea {
+        display: none;
+    }
+
+
+
+
+    .movie-box img {
+        padding: 30px 30px 30px 30px;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .movie-box {
+        flex-direction: column;
+    }
+
+
+    #movieDetailPage {
+        padding: 0;
+    }
+
+
+
+    .trailer-container {
+        
+    }
+
+
+    .trailer-container iframe {
+        width: 90%;
+        height: 200px;
+    }
+
+}

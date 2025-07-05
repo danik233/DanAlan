@@ -122,27 +122,41 @@ async function renderResults() {
     }
 }
 
+
+
 function displayMovies(movies) {
     mainContent.innerHTML = '';
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+
     movies.forEach(m => {
         const div = document.createElement('div');
         div.className = 'movie';
+        div.style.backgroundColor = isDarkMode ? '#333333' : '#999999';
+
         const isFav = favorites.some(f => f.imdbID === m.imdbID);
+
         div.innerHTML = `
-      <a href=\"movieIMDB.html?imdbID=${m.imdbID}\">` +
-            `<img src=\"${m.Poster && m.Poster !== 'N/A' ? m.Poster : 'error-img.png'}\" ` +
-            `alt=\"${m.Title}\" onerror=\"this.onerror=null;this.src='error-img.png';\"/>` +
-            `</a>` +
-            `<div class=\"movieText\">` +
-            `<h2>${m.Title}</h2>` +
-            `<p><strong>Year:</strong> ${m.Year}</p>` +
-            `<p><strong>Genre:</strong> ${m.Genre}</p>` +
-            `<p><strong>Rating:</strong> ${m.imdbRating}</p>` +
-            `<button class=\"fav-btn\" data-id=\"${m.imdbID}\" ` +
-            `${isFav ? 'disabled' : ''}>` +
-            `${isFav ? 'In Favorites' : 'Add to Favorites'}` +
-            `</button>` +
-            `</div>`;
+            <a href="movieIMDB.html?imdbID=${m.imdbID}">
+                <img src="${m.Poster && m.Poster !== 'N/A' ? m.Poster : 'images/error-img.png'}"
+                     alt="${m.Title}"
+                     onerror="this.onerror=null;this.src='images/error-img.png';"/>
+            </a>
+            <div class="movieText">
+                <h2>${m.Title}</h2><br>
+                <p><strong>Year:</strong> ${m.Year}</p><br>
+                <p><strong>Genre:</strong> ${m.Genre}</p><br>
+                <p><strong>Rating:</strong> ${m.imdbRating}</p><br>
+                <button class="fav-btn" data-id="${m.imdbID}" ${isFav ? 'disabled' : ''}>
+                    ${isFav ? 'In Favorites' : 'Add to Favorites'}
+                </button>
+            </div>
+        `;
+
+        const textElements = div.querySelectorAll('.movieText p, .movieText h2');
+        textElements.forEach(el => {
+            el.style.color = isDarkMode ? 'white' : 'black';
+        });
+
         const btn = div.querySelector('.fav-btn');
         btn.style.backgroundColor = isFav ? 'green' : 'rgb(245,197,24)';
         btn.style.color = isFav ? 'black' : 'initial';
@@ -160,9 +174,12 @@ function displayMovies(movies) {
                 }
             });
         }
+
         mainContent.appendChild(div);
     });
 }
+
+
 
 function populateGenreList() {
     const genres = [
