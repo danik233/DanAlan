@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     const poster = fav.Poster && fav.Poster !== "N/A" ? fav.Poster : "images/error-img.png";
 
                     return `
-                        <a href="movieIMDB.html?imdbID=${imdbID}" target="_blank" title="${title}">
+                        <a href="movieIMDB.html?imdbID=${imdbID}&admin=true" title="${title}">
                             <img 
                                 src="${poster}" 
                                 alt="${title}" 
@@ -86,4 +86,3 @@ async function changeUser(email) {
         alert("Failed to update user");
     }
 }
-
