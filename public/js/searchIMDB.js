@@ -7,6 +7,11 @@ const filterPanel = document.getElementById('filterPanel');
 const genreContainer = document.getElementById('genreCheckboxes');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
+
+const keyboardIcon = document.getElementById('keyboardIcon');
+const searchIcon = document.getElementById('searchIcon');
+
+
 let favorites = [],
     lastResults = [],
     detailedCache = {},
@@ -19,6 +24,13 @@ window.addEventListener('load', () => {
     if (stored) favorites = JSON.parse(stored);
     populateGenreList();
 });
+
+
+window.addEventListener('load', () => {
+    searchInput.focus();
+});
+
+
 
 filterBtn.addEventListener('click', () => filterPanel.classList.toggle('hidden'));
 
@@ -199,3 +211,91 @@ function debounce(fn, delay) {
         timeout = setTimeout(() => fn(...args), delay);
     };
 }
+
+
+
+
+
+
+
+
+// === VIRTUAL KEYBOARD === //
+window.addEventListener('load', () => {
+    // 1. Create & inject keyboard container
+    const keyboardContainer = document.createElement('div');
+    keyboardContainer.id = 'virtualKeyboard';
+    keyboardContainer.classList.add('hidden');
+    document.body.appendChild(keyboardContainer);
+
+    // 2. State + layout
+    let capsLock = false;
+    const keysLayout = [
+        ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+        ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+        ['caps', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '←'],
+        ['space', 'clear', 'close']
+    ];
+
+    // 3. Toggle & render function
+    keyboardIcon.addEventListener('click', () => {
+        keyboardContainer.classList.toggle('hidden');
+        if (!keyboardContainer.classList.contains('hidden')) renderKeyboard();
+    });
+
+    function renderKeyboard() {
+        keyboardContainer.innerHTML = '';
+        keysLayout.forEach(row => {
+            const rowDiv = document.createElement('div');
+            rowDiv.style.display = 'flex';
+
+            row.forEach(key => {
+                const btn = document.createElement('button');
+                btn.textContent = key === 'space' ? '␣' : key;
+
+                // Add class for function or space keys
+                if (['caps', 'clear', 'close'].includes(key)) {
+                    btn.classList.add('function-key');
+                    if (key === 'caps' && capsLock) {
+                        btn.classList.add('caps-active'); // Toggle caps style
+                    }
+                } else if (key === 'space') {
+                    btn.classList.add('space-key');
+                }
+
+                btn.addEventListener('click', () => handleKeyPress(key));
+                rowDiv.appendChild(btn);
+            });
+
+            keyboardContainer.appendChild(rowDiv);
+        });
+    }
+
+
+    // 4. Handle presses
+    function handleKeyPress(key) {
+        // focus & place caret at end
+        searchInput.focus();
+        const end = searchInput.value.length;
+        searchInput.setSelectionRange(end, end);
+
+        if (key === 'space') {
+            searchInput.value += ' ';
+        } else if (key === 'clear') {
+            searchInput.value = '';
+        } else if (key === 'close') {
+            keyboardContainer.classList.add('hidden');
+            return;
+        } else if (key === 'caps') {
+            capsLock = !capsLock;
+            renderKeyboard();
+            return;
+        } else if (key === '←') {
+            searchInput.value = searchInput.value.slice(0, -1);
+        } else {
+            searchInput.value += (capsLock ? key.toUpperCase() : key);
+        }
+
+        // trigger your live search handler
+        searchInput.dispatchEvent(new Event('input'));
+    }
+});

@@ -155,57 +155,13 @@ document.getElementById('searchText').addEventListener('keydown', (event) => {
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// KeyBoard:
-const keyboardLayout = [
-    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
-    ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
-    ['Z', 'X', 'C', 'V', 'B', 'N', 'M'],
-    ['SPACE', 'DEL', 'ENTER']
-];
-
-// Create and attach the keyboard
-const keyboardDiv = document.createElement('div');
-keyboardDiv.id = 'virtualKeyboard';
-document.body.appendChild(keyboardDiv);
-
-function createKeyboard() {
-    keyboardDiv.innerHTML = ''; // Clear previous keys
-    keyboardLayout.forEach(row => {
-        const rowDiv = document.createElement('div');
-        row.forEach(key => {
-            const keyBtn = document.createElement('span');
-            keyBtn.className = 'key';
-            keyBtn.textContent = key === 'SPACE' ? '␣' : key;
-            keyBtn.addEventListener('click', () => handleKeyPress(key));
-            rowDiv.appendChild(keyBtn);
-        });
-        keyboardDiv.appendChild(rowDiv);
-    });
-}
-
-function handleKeyPress(key) {
-    const input = document.getElementById('searchText');
-    if (key === 'SPACE') {
-        input.value += ' ';
-    } else if (key === 'DEL') {
-        input.value = input.value.slice(0, -1);
-    } else if (key === 'ENTER') {
-        searchMovie(); // Trigger search
-    } else {
-        input.value += key;
-    }
-    input.focus();
-}
-
-// Show/hide when clicking the icon
+//by press Keyboard go to searchIMDB.html
 document.getElementById('keyboardIcon').addEventListener('click', () => {
-    if (keyboardDiv.style.display === 'none') {
-        createKeyboard();
-        keyboardDiv.style.display = 'block';
-    } else {
-        keyboardDiv.style.display = 'none';
-    }
+    window.location.href = 'searchIMDB.html';
 });
+
+
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // click on movie image and show us rating+movie+comments.
 

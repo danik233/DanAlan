@@ -22,6 +22,7 @@ html {
     display: flex;
     align-items: center;
     gap: 10px;
+    /* background-color: red; */
 }
 
 #searchInput {
@@ -30,7 +31,7 @@ html {
     font-size: 1rem;
 }
 
-#filterBtn {
+/* #filterBtn {
     padding: 8px 12px;
     background-color: rgb(245, 197, 24);
     display: flex;
@@ -41,7 +42,7 @@ html {
     cursor: pointer;
     font-weight: bold;
 
-}
+} */
 
 #filterPanel {
     position: absolute;
@@ -157,11 +158,10 @@ header {
 }
 
 .buttonANDlogo a {
-    /* background-color: cyan; */
-    text-decoration: none;
-    font-family: 'Krona One', sans-serif;
-    font-size: 36px;
-    /* color: #000000; */
+    
+     text-decoration: none;
+     font-family: 'Krona One',  'sans-serif';
+     font-size: 36px;
 }
 
 /* -------------------------------------------------- Keyboard+search*/
@@ -263,7 +263,7 @@ header {
     margin-top: 70px;
 }
 
-
+#filterBtn,
 #backToSearch,
 #search-goto-fav,
 #fav-backto-search {
@@ -296,6 +296,106 @@ header {
 #movieDetailPage {
     padding: 0 50px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === VIRTUAL KEYBOARD STYLES === */
+
+/* Hide when hidden */
+#virtualKeyboard.hidden {
+  display: none !important;
+}
+
+/* Container */
+#virtualKeyboard {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  position: fixed !important;
+  bottom: 60px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background-color: #1a1a2e !important;
+  padding: 16px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5) !important;
+  z-index: 9999 !important;
+  gap: 10px !important;
+}
+
+/* All keys */
+#virtualKeyboard button {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 12px 16px !important;
+  font-size: 18px !important;
+  font-family: 'Krona One', sans-serif !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease, transform 0.1s ease !important;
+  min-width: 48px !important;
+  text-transform: uppercase;
+  margin: 2px !important;  /* 👈 spacing between keys */
+}
+
+/* Function keys: caps, clear, close */
+#virtualKeyboard button.function-key {
+  padding: 12px 28px !important;
+  font-size: 17px !important;
+  font-weight: bold !important;
+}
+
+/* Extra wide spacebar */
+#virtualKeyboard button.space-key {
+  padding: 12px 80px !important;
+  font-size: 17px !important;
+}
+
+/* Hover effect */
+#virtualKeyboard button:hover {
+  background-color: #ffd369 !important;
+  transform: scale(1.05);
+}
+
+/* Active press effect */
+#virtualKeyboard button:active {
+  background-color: #f7c948 !important;
+  transform: scale(0.98);
+}
+
+/* CAPS LOCK active */
+#virtualKeyboard button.caps-active {
+  background-color: #f7c948 !important;
+  color: #000 !important;
+  box-shadow: 0 0 6px 2px rgba(255, 211, 105, 0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -367,14 +467,14 @@ header {
 
 
 
-    .trailer-container {
-        
-    }
-
-
+     
     .trailer-container iframe {
         width: 90%;
         height: 200px;
+    }
+
+    #keyboardIcon{
+        display: none;
     }
 
 }

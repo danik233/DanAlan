@@ -760,4 +760,20 @@ header {
         left: auto;
     }
 
+
+    #movieTitle {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #poster-section {
+        display: block;
+    }
+
+    #poster-and-p {
+        gap: 0px;
+    }
+
+
+
 }
